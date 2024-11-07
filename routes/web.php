@@ -2,24 +2,26 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/about' , function(){
-    return view('about' , [
-        "page" => "About"
+Route::get('/', function() {
+    return view('welcome' , [
+        'pageTitle' => 'Home'
     ]);
 });
 
-Route::get('/shop', function(){
+Route::get('/shop', function() {
     return view('shop' , [
-        "page" => "Shop"
+        'pageTitle' => 'Shop'
     ]);
 });
 
-Route::get('/contact', function(){
+Route::get('/contact', function() {
     return view('contact' , [
-        "page" => "Contact"
+        'pageTitle' => 'Contact'
+    ]);
+});
+
+Route::get('/about', function() {
+    return view('about' , [
+        'pageTitle' => 'About'
     ]);
 });
